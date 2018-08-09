@@ -12,8 +12,8 @@
       	$.each( data, function( i, item ) {
         items.push( "<div class='cbp-item "+item.Kategori+"'>"+
 		                "<div class='cbp-caption'>"+
-		                    "<div class='cbp-caption-defaultWrap'>"+
-		                        "<i class='fa fa-question'></i>"+ 
+		                    "<div class='cbp-caption-defaultWrap' style=\"padding-left: 0px; \">"+
+		                        "<i class='fa fa-check-circle-o' style='color: #32c5d2 !important;'></i>"+ 
 		                        item.Pertanyaan+
 		                    "</div>"+
 		                    "<div class='cbp-caption-activeWrap'>"+
@@ -136,7 +136,7 @@
 			<div class="c-content-box c-size-md ">
 				<div class="container">
 				    <div class="cbp-panel">
-				        <div id="filters-container" class="cbp-l-filters-underline">
+				        <div id="filters-container" class="cbp-l-filters-underline" style="margin-bottom: 0px; text-align: center;">
 				            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
 				                Semua
 				            </div>
@@ -159,6 +159,13 @@
 				                Kepo
 				            </div>
 				        </div>
+                        <span id="dinamicHr" ></span>
+                        <script type="text/javascript">
+                            if($(window).width()<500){
+                            $('#dinamicHr').html("<hr style='border-top: 1px solid #32c5d2; margin: 10px;'>")
+                            }
+                        </script>
+                        
 
 				        <div id="grid-container" class=" cbp cbp-l-grid-faq">
 							<div id="pertanyaan" class=" cbp-wrapper"></div>
