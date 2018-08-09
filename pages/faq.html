@@ -25,28 +25,6 @@
 		            "</div>")
         });
         $("div.pertanyaan").html(items)
-
-        if (items == ''){
-            alert("need reload")
-            $.getJSON( "https://a.vatar.club/data/faq.json", function( data ) {
-                $.each( data, function( i, item ) {
-                items.push( "<div class='cbp-item "+item.Kategori+"'>"+
-                                "<div class='cbp-caption'>"+
-                                    "<div class='cbp-caption-defaultWrap'>"+
-                                        "<i class='fa fa-question'></i>"+ 
-                                        item.Pertanyaan+
-                                    "</div>"+
-                                    "<div class='cbp-caption-activeWrap'>"+
-                                        "<div class='cbp-l-caption-body'>"+
-                                            item.Jawaban+ 
-                                       " </div>"+
-                                   " </div>"+
-                                "</div>"+
-                            "</div>")
-              });
-            });
-            location.reload();
-        }
     });
 
 </script>
@@ -357,6 +335,14 @@ Follow: https://www.twitter.com/themehats
 
 </html>
 
+<script type="text/javascript">
+    jQuery(window).load(function () {
+        if (items == ''){
+            location.reload();
+        }
+
+    });
+</script>
 
 <style>
 table {
