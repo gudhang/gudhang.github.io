@@ -5,14 +5,13 @@
 $(document).ready(function() {
 $('#submit-siswa-form').on('click', function(e) {
     e.preventDefault();
-
+    $('#registrasi-siswa-form').modal('hide');
     var jqxhr = $.ajax({
       url: urlSiswa,
       method: "POST",
       dataType: "json",
       data: $formSiswa.serialize(),
       success: function (response) {
-        $('#registrasi-siswa-form').modal('hide');
         $('#thankyou-message1').modal('show');
       },
     }).fail(function(response) {
