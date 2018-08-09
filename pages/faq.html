@@ -10,7 +10,6 @@
     var items = [];
     $.getJSON( "https://a.vatar.club/data/faq.json", function( data ) {
       	$.each( data, function( i, item ) {
-      		// alert(item.Pertanyaan)
         items.push( "<div class='cbp-item "+item.Kategori+"'>"+
 		                "<div class='cbp-caption'>"+
 		                    "<div class='cbp-caption-defaultWrap'>"+
@@ -31,7 +30,6 @@
         alert("need reload")
         $.getJSON( "https://a.vatar.club/data/faq.json", function( data ) {
             $.each( data, function( i, item ) {
-                // alert(item.Pertanyaan)
             items.push( "<div class='cbp-item "+item.Kategori+"'>"+
                             "<div class='cbp-caption'>"+
                                 "<div class='cbp-caption-defaultWrap'>"+
@@ -47,7 +45,7 @@
                         "</div>")
           });
         });
-        alert(items);
+        location.reload();
     }
 </script>
 
@@ -201,7 +199,6 @@ Follow: https://www.twitter.com/themehats
 			</div>  
 
 			<script type="text/javascript">
-				      alert(items)
 				      $("div.pertanyaan").html(items)
 			</script>
 					<!-- END: PAGE CONTENT -->
