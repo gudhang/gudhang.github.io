@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="../assets/plugins/jquery.min.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+	<br>
+	<label>Hasil Enkripsi</label>
+	<div class="demo3"></div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var encrypted = CryptoJS.AES.encrypt("Ini pesan rahasia", "Password");
+	$("div.demo3").append(encrypted+"<br>");
+	var encrypted = CryptoJS.AES.encrypt("Ini pesan rahasia", "Password");
+	$("div.demo3").append(encrypted+"<br>");
+	var encrypted = CryptoJS.AES.encrypt("Ini pesan rahasia", "Password");
+	$("div.demo3").append(encrypted+"<br>");
+	var encrypted = CryptoJS.AES.encrypt("Ini pesan rahasia", "Password");
+	$("div.demo3").append(encrypted+"<br>");
+
+</script>
