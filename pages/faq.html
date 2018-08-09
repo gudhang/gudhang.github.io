@@ -24,7 +24,7 @@
 		                "</div>"+
 		            "</div>")
         });
-        $("div.pertanyaan").html(items)
+        $("div#pertanyaan").html(items)
     });
 
 </script>
@@ -171,8 +171,7 @@ Follow: https://www.twitter.com/themehats
 				        </div>
 
 				        <div id="grid-container" class=" cbp cbp-l-grid-faq">
-							<div class=" cbp-wrapper pertanyaan">
-				            </div>
+							<div id="pertanyaan" class=" cbp-wrapper"></div>
 				        </div>
 				    </div>
 				</div>
@@ -323,11 +322,6 @@ Follow: https://www.twitter.com/themehats
         <script src="../assets/demos/default/js/scripts/pages/isotope-gallery.js" type="text/javascript"></script>
         <script src="../assets/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js" type="text/javascript"></script>
         <script src="../assets/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js" type="text/javascript"></script>
-        <!-- END: PAGE SCRIPTS -->
-		<!-- BEGIN: PAGE SCRIPTS -->
-			<script src="../assets/demos/default/js/scripts/pages/faq.js" type="text/javascript"></script>
-		<!-- END: PAGE SCRIPTS -->
-        <!-- END: LAYOUT/BASE/BOTTOM -->
     </body>
 
 
@@ -335,6 +329,35 @@ Follow: https://www.twitter.com/themehats
 
 </html>
 
+<script type="text/javascript">
+    jQuery(window).load(function () {
+        if ($( "div#pertanyaan" ).html() == ''){
+            $("div#pertanyaan").html(items)
+        }
+
+        (function($, window, document, undefined) {'use strict';
+
+            // init cubeportfolio
+            $('#grid-container').cubeportfolio({
+                filters: '#filters-container',
+                defaultFilter: '*',
+                animationType: 'sequentially',
+                gridAdjustment: 'responsive',
+                displayType: 'default',
+                caption: 'expand',
+                mediaQueries: [{
+                    width: 1,
+                    cols: 1
+                }],
+                gapHorizontal: 0,
+                gapVertical: 0
+            });
+
+        })(jQuery, window, document);
+
+
+    });
+</script>
 
 <style>
 table {
@@ -351,12 +374,3 @@ th, td {
 
 tr:nth-child(even){background-color: rgba(2,171,198,0.15)}
 </style> 
-
-<script type="text/javascript">
-    jQuery(window).load(function () {
-            $("div.pertanyaan").html(items)
-            // alert("need reload")
-            // location.reload();
-
-    });
-</script>
