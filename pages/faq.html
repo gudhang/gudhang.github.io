@@ -26,6 +26,29 @@
 		            "</div>")
       });
     });
+
+    if (items == ''){
+        alert("need reload")
+        $.getJSON( "https://a.vatar.club/data/faq.json", function( data ) {
+            $.each( data, function( i, item ) {
+                // alert(item.Pertanyaan)
+            items.push( "<div class='cbp-item "+item.Kategori+"'>"+
+                            "<div class='cbp-caption'>"+
+                                "<div class='cbp-caption-defaultWrap'>"+
+                                    "<i class='fa fa-question'></i>"+ 
+                                    item.Pertanyaan+
+                                "</div>"+
+                                "<div class='cbp-caption-activeWrap'>"+
+                                    "<div class='cbp-l-caption-body'>"+
+                                        item.Jawaban+ 
+                                   " </div>"+
+                               " </div>"+
+                            "</div>"+
+                        "</div>")
+          });
+        });
+        alert(items);
+    }
 </script>
 
 <!-- END: CORE PLUGINS -->
