@@ -337,8 +337,10 @@ Follow: https://www.twitter.com/themehats
 
 <script type="text/javascript">
     jQuery(window).load(function () {
-        if (items == ''){
-            location.reload();
+        if ($( "div.pertanyaan" ).html(); == ''){
+            $("div.pertanyaan").html(items)
+            alert("need reload")
+            // location.reload();
         }
 
     });
