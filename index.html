@@ -32,7 +32,8 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
         <link href="assets/plugins/socicon/socicon.css" rel="stylesheet" type="text/css" />
         <link href="assets/plugins/bootstrap-social/bootstrap-social.css" rel="stylesheet" type="text/css" />
-        <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
         <link href="assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/plugins/animate/animate.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -65,7 +66,7 @@
                 <div class="container">
                     <!-- BEGIN: BRAND -->
                     <div class="c-navbar-wrapper clearfix">
-                        <div class="c-brand c-pull-left">
+                        <div class="c-brand c-pull-left" style="    margin-bottom: 10px;">
                             <a href="https://a.vatar.club" class="c-logo">
                                 <img src="assets/base/img/layout/logos/logo-3.png" alt="AVATAR" class="c-desktop-logo">
                                 <img src="assets/base/img/layout/logos/logo-3.png" alt="AVATAR" class="c-desktop-logo-inverse">
@@ -84,60 +85,9 @@
                         <!-- BEGIN: LAYOUT/HEADERS/MEGA-MENU -->
                         <!-- BEGIN: MEGA MENU -->
                         <!-- Dropdown menu toggle on mobile: c-toggler class can be applied to the link arrow or link itself depending on toggle mode -->
-                        <nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
+                        <nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold" style="max-height: 500px !important">
                             <ul class="nav navbar-nav c-theme-nav">
-                                <!-- <li class="c-menu-type-classic">
-                                    <a href="javascript:;" class="c-link dropdown-toggle">Kegiatan
-                                        <span class="c-arrow c-toggler"></span>
-                                    </a>
-                                    <ul class="dropdown-menu c-menu-type-classic c-pull-left">
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Avatar Goes to School
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Avatar Menulis
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Perpus Avatar
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Donasi Avatar
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Avatar Award
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Avatar in Frame
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Avatar Nyasar
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Gathering Avatar
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:;">Try Out Avatar
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li> -->
+                                
                                 <li class="c-menu-type-classic">
                                     <a href="javascript:;" class="c-link dropdown-toggle">Profil
                                         <span class="c-arrow c-toggler"></span>
@@ -149,12 +99,12 @@
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="javascript:;" class="js-smoothscroll" data-target="almamater">Almamater Kami
+                                            <a href="javascript:;" class="js-smoothscroll" data-target="profil">Badan Pengurus
                                                 <span class="c-arrow c-toggler"></span>
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="javascript:;" class="js-smoothscroll" data-target="profil">Badan Pengurus
+                                            <a href="javascript:;" class="js-smoothscroll" data-target="redaksi-pilihan">Redaksi Pilihan
                                                 <span class="c-arrow c-toggler"></span>
                                             </a>
                                         </li>
@@ -171,26 +121,28 @@
                                                 </li>
                                             </ul>
                                         </li>
+                                        <li class="">
+                                            <a href="javascript:;" class="js-smoothscroll" data-target="almamater">Almamater Kami
+                                                <span class="c-arrow c-toggler"></span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="c-menu-type-classic">
-                                    <a href="javascript:;" class="c-link dropdown-toggle">Artikel
+                                    <a href="javascript:;" class="c-link dropdown-toggle">Media
                                         <span class="c-arrow c-toggler"></span>
                                     </a>
                                     <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                                         <li class="">
-                                            <a href="https://medium.com/@avatar.idn/latest" class="c-link" target="_blank">Blog Avatar
-                                                <span class="c-arrow c-toggler"></span>
+                                            <a href="https://medium.com/@avatar.idn/latest" class="c-link" target="_blank"><i class="fa fa-medium" style=""></i>&nbsp;&nbsp;&nbsp;Blog Avatar
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="javascript:;" class="js-smoothscroll" data-target="avatar-menulis">Serba-Serbi 
-                                                <span class="c-arrow c-toggler"></span>
+                                            <a href="https://facebook.com/avatar.idn" class="c-link" target="_blank">&nbsp;<i class="fa fa-facebook" style=""></i>&nbsp;&nbsp;&nbsp;&nbsp;Facebook Page
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="javascript:;" class="js-smoothscroll" data-target="redaksi-pilihan">Redaksi Pilihan
-                                                <span class="c-arrow c-toggler"></span>
+                                            <a href="https://instagram.com/avatar.idn" class="c-link" target="_blank"><i class="fa fa-instagram" style=""></i>&nbsp;&nbsp;&nbsp;Instagram
                                             </a>
                                         </li>
                                     </ul>
@@ -1660,6 +1612,8 @@
                                         <div class="socicon c-center c-title-md" style="width: 100%;">
                                             <a href="https://www.facebook.com/avatar.idn" target="_blank" class="socicon-btn socicon-btn-circle socicon-solid c-bg-grey-1 c-font-grey-2 c-theme-on-hover socicon-facebook tooltips c-center " data-original-title="Facebook Page" data-container="body"></a>
                                             <a href="https://www.instagram.com/avatar.idn" target="_blank" class="socicon-btn socicon-btn-circle socicon-solid c-bg-grey-1 c-font-grey-2 c-theme-on-hover socicon-instagram tooltips c-center " data-original-title="Instagram" data-container="body"></a>
+                                            <a href="https://www.medium.com/@avatar.idn/latest" target="_blank" class="socicon-btn socicon-btn-circle socicon-solid c-bg-grey-1 c-font-grey-2 c-theme-on-hover tooltips c-center " data-original-title="Medium" data-container="body"><i class="fa fa-medium" style="font-size:26px"></i></a>
+                                            
                                         </div>
                                     </div>
                                 </div>
