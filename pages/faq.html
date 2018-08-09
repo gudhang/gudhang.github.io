@@ -23,30 +23,32 @@
 		                   " </div>"+
 		                "</div>"+
 		            "</div>")
-      });
+        });
+        $("div.pertanyaan").html(items)
+
+        if (items == ''){
+            alert("need reload")
+            $.getJSON( "https://a.vatar.club/data/faq.json", function( data ) {
+                $.each( data, function( i, item ) {
+                items.push( "<div class='cbp-item "+item.Kategori+"'>"+
+                                "<div class='cbp-caption'>"+
+                                    "<div class='cbp-caption-defaultWrap'>"+
+                                        "<i class='fa fa-question'></i>"+ 
+                                        item.Pertanyaan+
+                                    "</div>"+
+                                    "<div class='cbp-caption-activeWrap'>"+
+                                        "<div class='cbp-l-caption-body'>"+
+                                            item.Jawaban+ 
+                                       " </div>"+
+                                   " </div>"+
+                                "</div>"+
+                            "</div>")
+              });
+            });
+            location.reload();
+        }
     });
 
-    if (items == ''){
-        alert("need reload")
-        $.getJSON( "https://a.vatar.club/data/faq.json", function( data ) {
-            $.each( data, function( i, item ) {
-            items.push( "<div class='cbp-item "+item.Kategori+"'>"+
-                            "<div class='cbp-caption'>"+
-                                "<div class='cbp-caption-defaultWrap'>"+
-                                    "<i class='fa fa-question'></i>"+ 
-                                    item.Pertanyaan+
-                                "</div>"+
-                                "<div class='cbp-caption-activeWrap'>"+
-                                    "<div class='cbp-l-caption-body'>"+
-                                        item.Jawaban+ 
-                                   " </div>"+
-                               " </div>"+
-                            "</div>"+
-                        "</div>")
-          });
-        });
-        location.reload();
-    }
 </script>
 
 <!-- END: CORE PLUGINS -->
@@ -197,10 +199,6 @@ Follow: https://www.twitter.com/themehats
 				    </div>
 				</div>
 			</div>  
-
-			<script type="text/javascript">
-				      $("div.pertanyaan").html(items)
-			</script>
 					<!-- END: PAGE CONTENT -->
             <span id="faq" style="top: -60px; position: relative;"></span>
                 <!-- BEGIN: CONTENT/MISC/SUBSCRIBE-FORM-1 -->
