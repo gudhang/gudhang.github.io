@@ -334,25 +334,25 @@
                         <form id="peminjam-form">
                             <div class="form-elements">
                                 <div class="form-group">
-                                    <input type="text" name="peminjam-fullname" spellcheck="false" class="form-control c-square c-theme" id="peminjam-fullname" placeholder="Nama Lengkap">
+                                    <input type="text" name="peminjam_fullname" id="peminjam_fullname" spellcheck="false" class="form-control c-square c-theme" placeholder="Nama Lengkap">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" name="peminjam-phone" spellcheck="false" class="form-control c-square c-theme" id="peminjam-phone" placeholder="Nomor Telepon Whatsapp">
+                                    <input type="tel" name="peminjam_phone" id="peminjam_phone" spellcheck="false" class="form-control c-square c-theme" placeholder="Nomor Telepon Whatsapp">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" name="peminjam-address" spellcheck="false" class="form-control c-square c-theme" id="peminjam-address" placeholder="Alamat Rumah">
+                                    <input type="tel" name="peminjam_address" id="peminjam_address" spellcheck="false" class="form-control c-square c-theme" placeholder="Alamat Rumah">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="peminjam-id" spellcheck="false" class="form-control c-square c-theme" id="peminjam-id" placeholder="Nomor Keanggotaan">
+                                    <input type="text" name="peminjam_id" id="peminjam_id" spellcheck="false" class="form-control c-square c-theme" placeholder="Nomor Keanggotaan">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="peminjam-book-id" spellcheck="false" class="form-control c-square c-theme" id="peminjam-book-id" placeholder="Kode Buku">
+                                    <input type="text" name="peminjam_book_id" id="peminjam_book_id" spellcheck="false" class="form-control c-square c-theme" placeholder="Kode Buku">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="lama-peminjaman" spellcheck="false" class="form-control c-square c-theme" id="lama-peminjaman" placeholder="Lama Peminjaman (maksimal 1 Semester)">
+                                    <input type="text" name="lama_peminjaman" id="lama_peminjaman" spellcheck="false" class="form-control c-square c-theme" placeholder="Lama Peminjaman (maksimal 1 Semester)">
                                 </div>
                                 <div class="form-group">
-                                    <textarea type="text" name="peminjam-reason" spellcheck="false" class="form-control c-square c-theme" rows="3" id="peminjam-reason" placeholder="Alasan Anda ingin meminjam buku tersebut... "></textarea>
+                                    <textarea type="text" name="peminjam_reason" id="peminjam_reason" spellcheck="false" class="form-control c-square c-theme" rows="3" placeholder="Alasan Anda ingin meminjam buku tersebut... "></textarea>
                                 </div>
                                 <div class="form-group" style="text-align: right;">
                                     <button type="submit" id="submit-peminjaman-form" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Pinjam</button>
@@ -382,19 +382,19 @@
                         <form id="donasi-buku-form">
                             <div class="form-elements">
                                 <div class="form-group">
-                                    <input type="text" name="donatur-fullname" spellcheck="false" class="form-control c-square c-theme" id="donatur-fullname" placeholder="Nama Lengkap">
+                                    <input type="text" name="donatur_fullname" id="donatur_fullname" spellcheck="false" class="form-control c-square c-theme" placeholder="Nama Lengkap">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" name="donatur-phone" spellcheck="false" class="form-control c-square c-theme" id="donatur-phone" placeholder="Nomor Telepon Whatsapp">
+                                    <input type="tel" name="donatur_phone" id="donatur_phone" spellcheck="false" class="form-control c-square c-theme" placeholder="Nomor Telepon Whatsapp">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" name="donatur-address" spellcheck="false" class="form-control c-square c-theme" id="donatur-address" placeholder="Alamat Rumah">
+                                    <input type="tel" name="donatur_address" id="donatur_address" spellcheck="false" class="form-control c-square c-theme" placeholder="Alamat Rumah">
                                 </div>
                                 <div class="form-group">
-                                    <textarea type="text" name="daftar-sumbangan-buku" spellcheck="false" class="form-control c-square c-theme" rows="3" id="daftar-sumbangan-buku" placeholder="Tuliskan buku apa saja yang ingin Anda donasikan..."></textarea>
+                                    <textarea type="text" name="daftar_sumbangan_buku" id="daftar_sumbangan_buku" spellcheck="false" class="form-control c-square c-theme" rows="3" placeholder="Tuliskan buku apa saja yang ingin Anda donasikan..."></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <textarea type="text" name="donatur-reason" spellcheck="false" class="form-control c-square c-theme" rows="3" id="donatur-reason" placeholder="Alasan Anda ingin mendonasikan buku tersebut... "></textarea>
+                                    <textarea type="text" name="donatur_reason" id="donatur_reason" spellcheck="false" class="form-control c-square c-theme" rows="3" placeholder="Alasan Anda ingin mendonasikan buku tersebut... "></textarea>
                                 </div>
                                 <div class="form-group" style="text-align: right;">
                                     <button type="submit" id="submit-donasi-buku-form" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Donasikan</button>
@@ -1891,6 +1891,8 @@
         <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-pemateri.js"></script>
         <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-siswa.js"></script>
         <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-faq.js"></script>
+        <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-donasi-buku.js"></script>
+        <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-peminjaman-buku.js"></script>
         <!-- END: FORM SUBMISSION SCRIPTS-->
         <!-- END: LAYOUT/BASE/BOTTOM -->
     </body>
