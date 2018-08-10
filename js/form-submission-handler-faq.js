@@ -5,13 +5,13 @@ $(document).ready(function() {
 $('#submit-faq-form').on('click', function(e) {
   e.preventDefault();
   $("#submit-faq-form").prop('disabled', true);
-  $('#thankyou-message2').modal('show');
   var jqxhr = $.ajax({
     url: urlFaq,
     method: "POST",
     dataType: "json",
     data: $formFaq.serialize(),
     success: function (response) {
+      $('#thankyou-message2').modal('show');
       $("#submit-faq-form").prop('disabled', false);
       $("input#question").val("");
       $("input#user-account").val("");
