@@ -4,8 +4,7 @@ urlFaq = 'https://script.google.com/macros/s/AKfycbzU_R0HJuplncps1sOV6Eo7f6Ds3Uq
 $(document).ready(function() {
 $('#submit-faq-form').on('click', function(e) {
   e.preventDefault();
-  $("input#question").val("");
-  $("input#user-account").val("");
+  $("#submit-faq-form").prop('disabled', true);
   $('#thankyou-message2').modal('show');
   var jqxhr = $.ajax({
     url: urlFaq,
@@ -13,6 +12,9 @@ $('#submit-faq-form').on('click', function(e) {
     dataType: "json",
     data: $formFaq.serialize(),
     success: function (response) {
+      $("#submit-faq-form").prop('disabled', false);
+      $("input#question").val("");
+      $("input#user-account").val("");
     },
   }).fail(function(response) {
         alert("Failed");
