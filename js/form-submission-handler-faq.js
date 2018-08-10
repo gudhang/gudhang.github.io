@@ -10,7 +10,7 @@ $('#submit-faq-form').on('click', function(e) {
     dataType: "json",
     data: $formFaq.serialize(),
     success: function (response) {
-      alert("Pertanyaan Anda sudah berhasil kami rekam!")
+        $('#thankyou-message2').modal('show');
     },
   }).fail(function(response) {
         alert("Failed");
