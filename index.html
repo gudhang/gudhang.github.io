@@ -1541,14 +1541,14 @@
                                 <div class="c-body c-font-19 c-font-sbold">Jika Anda tidak menemukan pertanyaan tersebut di <a class="c-theme-color" href="pages/faq.html" target="_blank">FAQ</a>, silahkan bertanya di kolom berikut. Kami akan mengirimkan jawabannya melalui kontak yang Anda berikan.</div>
                             </div>
                             <div class="col-sm-6">
-                                <form action="#" style="color: white">
+                                <form id="faq-form" action="#" style="color: white">
                                     <div class="input-group input-group-lg c-square" style="width: 100%">
-                                        <input type="text" spellcheck="false" class="form-control c-square" placeholder="Tuliskan pertanyaan Anda" style="color: white" />
+                                        <input type="text" name="question" id="question" spellcheck="false" class="form-control c-square" placeholder="Tuliskan pertanyaan Anda" style="color: white" />
                                     </div>
                                     <div class="input-group input-group-lg c-square">
-                                        <input type="text" spellcheck="false" class="form-control c-square" placeholder="Email / No. Tlp / Akun Media Sosial Anda" style="color: white" />
+                                        <input type="text" name="user-account" id="user-account" spellcheck="false" class="form-control c-square" placeholder="Email / No. Tlp / Akun Media Sosial Anda" style="color: white" />
                                         <span class="input-group-btn">
-                                        <button class="btn c-theme-btn c-btn-square c-btn-uppercase c-font-bold" type="button">Kirim !</button>
+                                        <button class="btn c-theme-btn c-btn-square c-btn-uppercase c-font-bold" id="submit-faq-form" type="button">Kirim !</button>
                                         </span>
                                     </div>
                                 </form>
@@ -1712,6 +1712,7 @@
         <!-- BEGIN: FORM SUBMISSION SCRIPTS -->
         <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-pemateri.js"></script>
         <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-siswa.js"></script>
+        <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler-faq.js"></script>
         <!-- END: FORM SUBMISSION SCRIPTS-->
         <!-- END: LAYOUT/BASE/BOTTOM -->
     </body>
