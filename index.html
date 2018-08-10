@@ -151,11 +151,11 @@
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="#" class="c-link" target="_blank"><i class="fa fa-briefcase" style="width: 15%"></i>Meminjam Buku
+                                            <a href="javascript:;" data-toggle="modal" data-target="#meminjam-buku-form" data-dismiss="modal" class="c-link"><i class="fa fa-briefcase" style="width: 15%"></i>Meminjam Buku
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="#" class="c-link" target="_blank"><i class="fa fa-handshake-o" style="width: 15%"></i>Donasi Buku
+                                            <a href="javascript:;" data-toggle="modal" data-target="#donasi-buku-form" data-dismiss="modal" class="c-link"><i class="fa fa-handshake-o" style="width: 15%"></i>Donasi Buku
                                             </a>
                                         </li>
                                     </ul>
@@ -314,6 +314,97 @@
             </div>
         </div>
         <!-- END: PAGE CONTAINER LAYOUT/FORM FOR PEMATERI -->
+        <!-- BEGIN: LAYOUT/FORM FOR MEMINJAM BUKU -->
+        <div class="modal fade c-content-login-form" id="meminjam-buku-form" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content c-square" style="margin-top: 30px;">
+                    <div class="modal-header c-no-border">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="c-font-24 c-font-sbold c-center">Meminjam Buku</h3>
+                        <hr>
+                        <div class="c-font-15">
+                            <p>* Silahkan lihat daftar buku yang tersedia di link berikut: <a href="/pages/katalog-perpus-offline.html" target="_blank"><b>Katalog Perpus Offline</b></a></p>
+                            <p>* Nomor keanggotaan bisa dilihat pada Menu <b>Profil/Daftar Anggota</b></p>
+                            <p>* Anda akan dihubungi oleh pengurus Perpus Avatar ketika data sudah diverifikasi</p>
+                            <p>* Saat ini buku hanya tersedia di wilayah Trenggalek</p>
+                        </div>
+                        <form id="peminjam-form">
+                            <div class="form-elements">
+                                <div class="form-group">
+                                    <input type="text" name="peminjam-fullname" spellcheck="false" class="form-control c-square c-theme" id="peminjam-fullname" placeholder="Nama Lengkap">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="peminjam-phone" spellcheck="false" class="form-control c-square c-theme" id="peminjam-phone" placeholder="Nomor Telepon Whatsapp">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="peminjam-address" spellcheck="false" class="form-control c-square c-theme" id="peminjam-address" placeholder="Alamat Rumah">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="peminjam-id" spellcheck="false" class="form-control c-square c-theme" id="peminjam-id" placeholder="Nomor Keanggotaan">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="peminjam-book-id" spellcheck="false" class="form-control c-square c-theme" id="peminjam-book-id" placeholder="Kode Buku">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="lama-peminjaman" spellcheck="false" class="form-control c-square c-theme" id="lama-peminjaman" placeholder="Lama Peminjaman (maksimal 1 Semester)">
+                                </div>
+                                <div class="form-group">
+                                    <textarea type="text" name="peminjam-reason" spellcheck="false" class="form-control c-square c-theme" rows="3" id="peminjam-reason" placeholder="Alasan Anda ingin meminjam buku tersebut... "></textarea>
+                                </div>
+                                <div class="form-group" style="text-align: right;">
+                                    <button type="submit" id="submit-peminjaman-form" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Pinjam</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: PAGE CONTAINER LAYOUT/FORM FOR MEMINJAM BUKU -->
+        <!-- BEGIN: LAYOUT/FORM FOR MEMINJAM BUKU -->
+        <div class="modal fade c-content-login-form" id="donasi-buku-form" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content c-square" style="margin-top: 30px;">
+                    <div class="modal-header c-no-border">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="c-font-24 c-font-sbold c-center">Donasi Buku</h3>
+                        <hr>
+                        <div class="c-font-15">
+                            <p>* Kami menerima donasi buku bacaan non akademis maupun akademis</p>
+                            <p>* Buku akan diambil oleh anggota Avatar yang tersebar di berbagai wilayah ataupun dapat juga dipaketkan </p>
+                            <p>* Anda akan dihubungi oleh pengurus Perpus Avatar ketika data sudah diverifikasi</p>
+                        </div>
+                        <form id="donasi-buku-form">
+                            <div class="form-elements">
+                                <div class="form-group">
+                                    <input type="text" name="donatur-fullname" spellcheck="false" class="form-control c-square c-theme" id="donatur-fullname" placeholder="Nama Lengkap">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="donatur-phone" spellcheck="false" class="form-control c-square c-theme" id="donatur-phone" placeholder="Nomor Telepon Whatsapp">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="donatur-address" spellcheck="false" class="form-control c-square c-theme" id="donatur-address" placeholder="Alamat Rumah">
+                                </div>
+                                <div class="form-group">
+                                    <textarea type="text" name="daftar-sumbangan-buku" spellcheck="false" class="form-control c-square c-theme" rows="3" id="daftar-sumbangan-buku" placeholder="Tuliskan buku apa saja yang ingin Anda donasikan..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <textarea type="text" name="donatur-reason" spellcheck="false" class="form-control c-square c-theme" rows="3" id="donatur-reason" placeholder="Alasan Anda ingin mendonasikan buku tersebut... "></textarea>
+                                </div>
+                                <div class="form-group" style="text-align: right;">
+                                    <button type="submit" id="submit-donasi-buku-form" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Donasikan</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: PAGE CONTAINER LAYOUT/FORM FOR MEMINJAM BUKU -->
         <!-- BEGIN: POP-UP SUCCES FORM SUBMITTED -->
         <div class="modal fade c-content-login-form" id="thankyou-message1" role="dialog">
             <div class="modal-dialog">
@@ -345,6 +436,46 @@
                         <div style="padding: 0px 20px">
                             <h4>Terimakasih sudah bertanya! 
                         <br>Anda akan dihubungi oleh tim kami ketika pertanyaan sudah dijawab.</h4>
+                        </div>
+                        <div class="form-group" style="text-align: right; margin: 0px;">
+                            <button type="button" id="submit-pemateri-form" data-dismiss="modal" class=" btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Ok !</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: POP-UP SUCCES FORM SUBMITTED -->
+        <!-- BEGIN: POP-UP SUCCES FORM SUBMITTED -->
+        <div class="modal fade c-content-login-form" id="thankyou-message-meminjam" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content c-square" style="padding: 17px 20px 0px 20px; margin-bottom: 0px">
+                    <div class="modal-header c-no-border" style="padding: 0px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body" style="padding: 0px 0px 20px 0px;">
+                        <div style="padding: 0px 20px">
+                            <h4>Terimakasih! 
+                        <br>Permintaan peminjaman buku Anda akan segera diproses.</h4>
+                        </div>
+                        <div class="form-group" style="text-align: right; margin: 0px;">
+                            <button type="button" id="submit-pemateri-form" data-dismiss="modal" class=" btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Ok !</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: POP-UP SUCCES FORM SUBMITTED -->
+        <!-- BEGIN: POP-UP SUCCES FORM SUBMITTED -->
+        <div class="modal fade c-content-login-form" id="thankyou-message-donasi" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content c-square" style="padding: 17px 20px 0px 20px; margin-bottom: 0px">
+                    <div class="modal-header c-no-border" style="padding: 0px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body" style="padding: 0px 0px 20px 0px;">
+                        <div style="padding: 0px 20px">
+                            <h4>Terimakasih atas niat baik Anda! 
+                        <br>Pengurus Perpus Avatar akan segera menghubungi Anda.</h4>
                         </div>
                         <div class="form-group" style="text-align: right; margin: 0px;">
                             <button type="button" id="submit-pemateri-form" data-dismiss="modal" class=" btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Ok !</button>
@@ -930,7 +1061,7 @@
                                             <br>
                                             <div class="c-author">
                                                 <div class="c-portrait" style="background-image: url(assets/base/img/content/avatars/mahsun.jpg)"></div>
-                                                <div class="c-name c-font-uppercase">M. Mahsun Ismail</div>
+                                                <div class="c-name c-font-uppercase">M. Ali Mahsun</div>
                                                 <p class="c-position c-theme c-font-uppercase">Founder Avatar</p>
                                             </div>
                                         </div>
