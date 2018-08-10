@@ -106,7 +106,7 @@ Follow: https://www.twitter.com/themehats
                 <div class="container">
                     <div class="row">
                         <div class="c-content c-center">
-                            <h3 class="c-theme-font c-font-24 c-font-uppercase c-font-bold">Katalog Perpus Offline</h3>
+                            <h3 class="c-theme-font c-font-24 c-font-uppercase c-font-bold">Data Peminjaman Buku</h3>
                         </div>
                         <br>
                         <div class="col-md-12">
@@ -114,7 +114,8 @@ Follow: https://www.twitter.com/themehats
                                 <!-- <h3 class="c-font-24 c-font-center c-font-bold c-font-uppercase c-margin-b-30">  </h3> -->
                                 <div class="c-line-center c-theme-bg"></div>
                             </div>
-                            <p>* Pastikan status buku yang ingin dipinjam masih tersedia :)</p>
+                            <p>* Masukkan password untuk melihat: <a onclick="decrypt('U2FsdGVkX1/olIvSiT4ebeX1M8es2CqHpd8vriIioLER39uyc4gCFTHYmhlkSskypx3l74Aomc9if3+FXahPNg==')" class="c-action-btn btn c-btn-square c-theme-btn" style="font-size: 14px;">Akses Data</a></p>
+                            <p>* Data tidak tersedia untuk umum karena berisi informasi pribadi peminjam.</p>
                         </div>
                         <div class="col-md-12">
                             <div class="loader " id="loader"></div>
@@ -275,26 +276,33 @@ tr:nth-child(even){background-color: rgba(2,171,198,0.15)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 <script src="../assets/plugins/tabletop/tabletop.min.js" type="text/javascript"></script>
 <script type='text/javascript'>    
-  function init() {
-    Tabletop.init( { key: '1Q_cm5BED8WdH2YhB2oupb4zZLjifAF3q67dNPLQOhyc',
-                     callback: showInfo,
-                     simpleSheet: true } )
-  }
 
-  function showInfo(data, tabletop) {
-    console.log(tabletop)
-    var items = [];
-    items.push("<tr><th>ID</th><th>Judul</th><th>Penerbit</th><th>Kategori</th><th>Status</th><th>Pengembalian</th> </tr>")
-    $.each( data, function( i, arsip ) {
-        // alert(arsip.book_id +" "+arsip.book_title)
-        items.push("<tr class='wow animate fadeInUp' style='opacity:1'> <td>" + arsip.book_id+ "</td> <td>" + arsip.book_title + "</td> <td>" + arsip.book_publisher + "</td> <td>" + arsip.book_category + "</td> <td>" + arsip.book_status + "</td> <td>" + arsip.return_date + "</td> </tr>");
-      });
-      $("table.arsip").html(items)
+    document.getElementById("loader").style.display = "none";
+    function decrypt(encrypted){
+        var password = prompt("Masukkan password");
+        var decrypted = CryptoJS.AES.decrypt(encrypted, password);
 
-      document.getElementById("loader").style.display = "none";
-  }
+        if(decrypted==''){
+            alert("Password salah")
+        }else{
+            document.getElementById("loader").style.display = "block";
+            Tabletop.init( { key: decrypted.toString(CryptoJS.enc.Utf8),
+                 callback: showInfo,
+                 simpleSheet: true } )
+        }
+    }
 
-  window.addEventListener('DOMContentLoaded', init)
+    function showInfo(data, tabletop) {
+        var items = [];
+            items.push("<tr><th>ID Anggota</th><th>Nama Peminjam</th><th>No. Telepon</th><th>Alamat</th><th>ID Buku</th> <th>Judul Buku</th> <th>Pengembalian</th></tr>")
+            $.each( data, function( i, arsip ) {
+                // alert(arsip.book_id +" "+arsip.book_title)
+                items.push("<tr class='wow animate fadeInUp' style='opacity:1'> <td>" + arsip.user_id+ "</td> <td>" + arsip.user_name + "</td> <td>" + arsip.user_phone + "</td> <td>" + arsip.user_address + "</td> <td>" + arsip.book_id + "</td> <td>" + arsip.book_title + "</td> <td>" + arsip.return_date + "</td> </tr>");
+              });
+              $("table.arsip").html(items)
+
+              document.getElementById("loader").style.display = "none";
+      }
 
 </script>
 
