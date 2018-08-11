@@ -11,13 +11,25 @@ $('#submit-faq-form').on('click', function(e) {
     dataType: "json",
     data: $formFaq.serialize(),
     success: function (response) {
+      clearForms();
       $('#thankyou-message2').modal('show');
       $("#submit-faq-form").prop('disabled', false);
-      $("input#question").val("");
-      $("input#user-account").val("");
+      // $("input#question").val("");
+      // $("input#user-account").val("");
     },
   }).fail(function(response) {
         alert("Failed");
+        clearForms();
+        $("#submit-faq-form").prop('disabled', false);
     });
 });
+
+function clearForms()
+{
+  var i;
+  for (i = 0; (i < document.forms.length); i++) {
+    document.forms[i].reset();
+  }
+}
+
 });
