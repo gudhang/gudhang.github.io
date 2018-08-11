@@ -283,7 +283,7 @@ tr:nth-child(even){background-color: rgba(2,171,198,0.15)}
       items.push("<tr><th>No.</th><th>Nama</th><th>No. Anggota</th><th>Afiliasi</th><th style='text-align: center;'>Detail</th> </tr>")
       $.each( data, function( i, siswa ) {
         // alert(i)
-        items.push("<tr class='wow animate fadeInUp' style='opacity:1'> <td>" + (i+1) + "</td> <td>" + siswa.Nama + "</td> <td>" + siswa.AnggotaID + "</td>  <td>" + siswa.Afiliasi + "</td> <td style='text-align: center;'>" + 
+        items.push("<tr class='wow animate fadeInUp' style='opacity:1'> <td>" + (i+1) + "</td> <td>" + siswa.Nama + "</td> <td>" + siswa.Id + "</td>  <td>" + siswa.Afiliasi + "</td> <td style='text-align: center;'>" + 
             "..." +
             "</td> </tr>");
       });
@@ -304,7 +304,7 @@ tr:nth-child(even){background-color: rgba(2,171,198,0.15)}
               items.push("<tr><th>No.</th><th>Nama</th><th>No. Anggota</th><th>Afiliasi</th><th style='text-align: center;'>No. Telepon</th> </tr>")
               $.each( data, function( i, siswa ) {
                 decrypted = CryptoJS.AES.decrypt(siswa.Telepon, password);
-                items.push("<tr> <td>" + (i+1) + "</td> <td>" + siswa.Nama + "</td> <td>" + siswa.AnggotaID + "</td> <td>" + siswa.Afiliasi + "</td> <td style='text-align: center;'>" + 
+                items.push("<tr> <td>" + (i+1) + "</td> <td>" + siswa.Nama + "</td> <td>" + siswa.Id + "</td> <td>" + siswa.Afiliasi + "</td> <td style='text-align: center;'>" + 
                     decrypted.toString(CryptoJS.enc.Utf8) + 
                     "</td> </tr>");
               });
