@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Holaa</p>
+	<img id="myImg" src="" >
+</body>
+</html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	// this will parse the raw html to get the list of imgs
+	function parse(str){
+		// Cutting the html string start from word "Parent Directory", 
+		// to make the regex search faster
+		var n = str.indexOf("Parent Directory");
+		str = str.substring(n);
+
+		// alert(str)
+
+		// Get the imgs name on the directory
+		var regex = /href="/gi, result, list_of_imgs = [];
+		while ( (result = regex.exec(str)) ) {
+		    var id = result.index + 5;
+		    var img_name = "";
+		    while (str.charAt(id+1) != '"'){
+		    	img_name += str.charAt(id+1);
+		    	id = id+1;
+		    }
+		    // alert(img_name);
+		    list_of_imgs.push(img_name);
+		}
+		// alert(list_of_imgs);
+		return list_of_imgs;
+	}
+
+    function displayRandomImage(list_of_imgs){
+		var id = Math.floor(Math.random() * list_of_imgs.length);
+		document.getElementById("myImg").src = 
+			"http://people.cs.uchicago.edu/~riza/img/"+list_of_imgs[id];
+	    // alert(list_of_imgs[id]);
+    }
+
+	// Get the raw html string from Riza's img dir
+	var url = "http://people.cs.uchicago.edu/~riza/img/"
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+		if (this.readyState === 4 && this.status === 200) {
+		  var response = this.responseText;
+
+		  var list_of_imgs = parse(response);
+		  displayRandomImage(list_of_imgs);
+		}
+	}
+	xhr.open("GET", "https://cors-anywhere.herokuapp.com/"+url+"");
+	xhr.setRequestHeader("Accept", 'application/json');
+	xhr.send();
+
+</script>
